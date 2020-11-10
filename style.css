@@ -1,0 +1,102 @@
+body{   
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#user-input{
+    margin-top:1vh;
+    height: 6vh;
+    width:25vw;
+    border: 2px solid black;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    font-size:130%;
+    padding-left:1vw;
+}
+#send-button{
+    background-color: cornflowerblue;
+    color:white;
+    font-size:130%;
+    margin-left:-0.4vw;
+    height: 6.64vh;
+    width: 8vw;
+    border: 2px solid black;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+#send-message-container{
+    min-height: 100%;
+
+}
+#nessages-container::-webkit-scrollbar {
+    display: none;
+
+}
+#messages-container{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    overflow-y: auto;
+    height:80vh;
+    width: 50vw;
+    display:block;
+    border: 4px solid black;
+    border-top:none;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+}
+.receive-message-style{
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    word-break: break-all;
+    padding:10px;
+    padding-left:15px;
+    margin-top:2vh;
+    width:60%;
+    text-align:left;
+    font-size:100%;
+    margin-right: 30%;
+    margin-left:5%;
+    border-radius:20px;
+}
+.send-message-style{
+    background-image: linear-gradient(to right top, #6bd19c, #72d599, #7ada95, #83de91, #8de28c, #8ae693, #88ea9b, #85eea2, #76f2b7, #69f6cc, #60f9df, #5ffbf1);
+    word-break: break-all;
+    padding: 15px;
+    padding-right:15px;
+    margin-top:2vh;
+    text-align:left;
+    width:50%;
+    font-size:100%;
+    margin-left: 30%;
+    margin-right:5%;
+    border-radius:20px;
+}
+.user-joined-style{
+    word-break: break-all;
+    padding: 10px;
+    padding-right:15px;
+    margin-top:2vh;
+    text-align:center;
+    width:80%;
+    font-size:100%;
+    float:center;
+    margin-right: 3vw;
+    border: 2px solid black;
+    border-radius:20px;
+}
+.message-body{
+    font-weight: bold;
+    word-break: break-all;
+    width:100%;
+    padding:0;
+    margin:0;
+    font-size:150%;
+    text-decoration: none;
+}
+.message-sender{
+    width:100%;
+    padding:0;
+    margin:0;
+    text-decoration: underline;
+    font-size:80%;
+}
+.sent-image{
+    width:100%;
+}

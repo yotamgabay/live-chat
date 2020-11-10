@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatrogel</title>
+    <script defer src="https://yotam-chat-app.herokuapp.com/socket.io/socket.io.js"></script>
+    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--
+    <div id="input-container">
+        <input type="text" id="username" placeholder="Username...">
+        <button id="submitButton" onclick="submitInfo(); ">Post</button>
+        <br>
+        <textarea name="maininput" placeholder="Body..." id="text-body" cols="30" rows="10"></textarea>
+    </div>
+  -->
+  <center>
+      <div id="messages-container">
+      </div>
+      <form id="send-message-container" style="display:inline-block;">
+          <input type="text" id="user-input" maxlength="100">
+          <button type="submit" id="send-button">Send</button>
+      </form>
+</center>
+    
+    
+</body>
+</html>
