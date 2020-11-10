@@ -4,12 +4,22 @@ const messageContainer = document.getElementById('messages-container')
 const sendForm = document.getElementById("send-message-container")
 
 //users joining
-var user_name = prompt("Enter your name:")
-drawUsers('You joined the chat', true)
+var user_name = prompt("Enter your name:").trim()
+if(user_name != null && user_name != ""){
+    drawUsers('You joined the chat', true)
+}
 socket.emit("user-joined", user_name)
 
 socket.on('user-connected',name => {
     drawUsers(name + " joined the chat");
+})
+
+socket.on('user-invalid-name',() => {
+    var user_name = prompt("Enter your name:").trim()
+    if(user_name != null && user_name != ""){
+        drawUsers('You joined the chat', true)
+    }
+socket.emit("user-joined", user_name)
 })
 
 socket.on('user-disconnected',name => {
