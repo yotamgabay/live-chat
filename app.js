@@ -4,7 +4,7 @@ const messageContainer = document.getElementById('messages-container')
 const sendForm = document.getElementById("send-message-container")
 
 //users joining
-var user_name = prompt("Enter your name: ")
+var user_name = prompt("Enter your name:")
 drawUsers('You joined the chat', true)
 socket.emit("user-joined", user_name)
 
@@ -25,7 +25,7 @@ socket.on('chat-message',data => {
 sendForm.addEventListener('submit', e =>{
     e.preventDefault()
     const message = messageInput.value.toString().trim();
-    if(message.length <= 300 && message != ""){
+    if(message.length <= 400 && message != ""){
         socket.emit('send-chat-message',message);
         drawMessage([name,message],true);
     }
