@@ -4,7 +4,7 @@ const messageContainer = document.getElementById('messages-container')
 const sendForm = document.getElementById("send-message-container")
 
 //users joining
-var user_name = prompt("what's your name nigga")
+var user_name = prompt("Enter your name: ")
 drawUsers('You joined the chat', true)
 socket.emit("user-joined", user_name)
 
