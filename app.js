@@ -25,7 +25,7 @@ socket.on('chat-message',data => {
 sendForm.addEventListener('submit', e =>{
     e.preventDefault()
     const message = messageInput.value.toString().trim();
-    if(message.length <= 100 && message != ""){
+    if(message.length <= 300 && message != ""){
         socket.emit('send-chat-message',message);
         drawMessage([name,message],true);
     }
