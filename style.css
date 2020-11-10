@@ -26,7 +26,7 @@ body{
     min-height: 100%;
 
 }
-#nessages-container::-webkit-scrollbar {
+#messages-container::-webkit-scrollbar {
     display: none;
 
 }
@@ -99,4 +99,6 @@ body{
 }
 .sent-image{
     width:100%;
+    border-radius:10px;
+    margin-top:1.5vh;
 }
