@@ -2,7 +2,7 @@ const socket = io("https://yotam-chat-app.herokuapp.com/")
 const messageInput = document.getElementById('user-input')
 const messageContainer = document.getElementById('messages-container')
 const sendForm = document.getElementById("send-message-container")
-
+window.mobileCheck();
 //users joining
 var user_name = prompt("Enter your name:").trim()
 if(user_name != null && user_name != ""){
@@ -22,6 +22,9 @@ window.mobileCheck = function() {
         document.getElementById('user-input').style.width = "60vw";
         document.getElementById('send-button').style.width = "22vw";
 
+    }
+    else{
+        console.log("pipi")
     }
   };
 socket.on('user-invalid-name',() => {
