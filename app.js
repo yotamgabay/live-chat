@@ -14,6 +14,23 @@ socket.on('user-connected',name => {
     drawUsers(name + " joined the chat");
 })
 
+function isLight(color){
+    color = color.split(',');
+    r = color[0];
+    g = color[1];
+    b = color[2];
+    hsp = Math.sqrt(
+        0.299 * (r * r) +
+        0.587 * (g * g) +
+        0.114 * (b * b)
+    );
+    if(hsp > 127.5){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
 function mobileCheck() {
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
         document.getElementById('messages-container').style.width = "90vw";
@@ -64,7 +81,12 @@ function drawMessage(message,isMyMessage = false){
         }
         else{
             messageElement.classList.add("receive-message-style")
+            //user unique message color
             messageElement.style.backgroundColor = 'rgb('+message[2]+')'
+            //check if message color is dark or light
+            if(!isLight(message[2])){
+                messageElement.style.color = "#FFFFFF";
+            }
         }
         senderName.innerText = message[0]
         messageBody.innerText = message[1];
