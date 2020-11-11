@@ -1,4 +1,4 @@
-const socket = io("http://localhost:3000")
+const socket = io("https://yotam-chat-app.herokuapp.com/")
 const messageInput = document.getElementById('user-input')
 const messageContainer = document.getElementById('messages-container')
 const sendForm = document.getElementById("send-message-container")
