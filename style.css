@@ -46,7 +46,6 @@ body{
     border-bottom-right-radius: 60px;
 }
 .receive-message-style{
-    background-image: linear-gradient(to right top, #6bd19c, #72d599, #7ada95, #83de91, #8de28c, #8ae693, #88ea9b, #85eea2, #76f2b7, #69f6cc, #60f9df, #5ffbf1);
     word-break: break-word;
     padding:10px;
     padding-left:15px;
