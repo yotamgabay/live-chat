@@ -1,4 +1,4 @@
-const socket = io("https://yotam-chat-app.herokuapp.com/")
+const socket = io("http://localhost:3000")
 const messageInput = document.getElementById('user-input')
 const messageContainer = document.getElementById('messages-container')
 const sendForm = document.getElementById("send-message-container")
@@ -39,7 +39,6 @@ socket.on('user-disconnected',name => {
 })
 
 socket.on('chat-message',data => {
-    console.log(data);
     drawMessage(data);
 })
 
@@ -54,7 +53,7 @@ sendForm.addEventListener('submit', e =>{
     
 })
 function drawMessage(message,isMyMessage = false){
-    if (message != ""){
+    if (message[1] != ""){
         const messageElement = document.createElement('div');
         const messageBody = document.createElement('a');
         const senderName = document.createElement('p');
@@ -65,6 +64,7 @@ function drawMessage(message,isMyMessage = false){
         }
         else{
             messageElement.classList.add("receive-message-style")
+            messageElement.style.backgroundColor = 'rgb('+message[2]+')'
         }
         senderName.innerText = message[0]
         messageBody.innerText = message[1];
